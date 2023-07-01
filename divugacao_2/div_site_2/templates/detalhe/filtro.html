@@ -1,0 +1,99 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block conteudo %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtro</title>
+     <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/fontawesome-free/css/all.min.css'  %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css'  %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css'  %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css'  %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+</head>
+<body>
+
+    <h1 style="text-align: center;">Detalhes</h1>
+<div class="formulario">  
+
+        <form method="GET">
+            <div class="form-group">
+                <label for="data_inicio" >Data de Início:</label>
+                <input type="date" id="data_inicio" name="data_inicio">
+            </div>
+            <div class="form-group">
+                <label for="data_fim" style="margin-top: 15px;">Data de Fim:</label>
+                <input type="date" id="data_fim" name="data_fim">
+            </div>
+            <div class="form-group">
+                <label for="placa" style="margin-top: 15px;">Placa:</label>
+                <input type="text" id="placa" name="placa">
+            </div>
+            <button class='btn btn-success' style="margin-top: 15px;" style='margin-bottom: 10px;' style='color:white;'>Buscar</button>
+        </form>
+</div> 
+
+        {% if dados %}
+            <table class="table table-hover table-bordered">
+                <tr>
+                    <th>ID</th>
+                    <th>Item</th>
+                    <th>Placa</th>
+                    <th>Valor</th>
+                    <th>Fornecedor</th>
+                    <th>Data</th>
+                    <th>Solicitante</th>
+                    <th>Autorizado</th>
+                </tr>
+                {% for item in dados %}
+                    <tr>
+                        <td>{{ item.id }}</td>
+                        <td>{{ item.item }}</td>
+                        <td>{{ item.placa }}</td>
+                        <td>{{ item.valor }}</td>
+                        <td>{{ item.fornecedor }}</td>
+                        <td>{{ item.data }}</td>
+                        <td>{{ item.solicitante }}</td>
+                        <td>{{ item.autorizado }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+
+            {% if dados %}
+                <form method="GET" action="{% url 'filtro' %}">
+                    <input type="hidden" name="data_inicio" value="{{ request.GET.data_inicio }}">
+                    <input type="hidden" name="data_fim" value="{{ request.GET.data_fim }}">
+                    <input type="hidden" name="placa" value="{{ request.GET.placa }}">
+                    <!--<button class='btn btn-success' style='margin-bottom: 10px;'><a style='color:white;' href="{% url 'filtro' %}?data_inicio={{ request.GET.data_inicio }}&data_fim={{ request.GET.data_fim }}&placa={{ request.GET.placa }}&download=true" target="_blank">Baixar</a></button> -->
+                </form>
+            {% endif %}
+
+        {% else %}
+            <p>Nenhum dado encontrado.</p>
+        {% endif %}
+
+    <br>
+    <button class='btn btn-success' style='margin-bottom: 10px;'><a style='color:white;'><a style='color:white;' href="{% url 'tela' %}">Voltar</a></button>
+    <button class='btn btn-success' style='margin-bottom: 10px;'><a style='color:white;'><a style='color:white;' href="{% url 'cadastro' %}">Novo Cadastro</a></button>
+
+    <style>
+
+        .formulario {
+            display: flex;
+            justify-content: center;
+    
+        }
+    </style>
+    {% endblock %}
+
+</body>
+</html>
+    

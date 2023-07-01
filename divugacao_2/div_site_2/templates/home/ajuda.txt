@@ -1,0 +1,59 @@
+Estrutura para criar arquivos no Django
+
+1 criar uma pasta com o nome do projeto
+2 abrir o terminal e acessar a pasta que foi criado
+	2.1 para ter acesso aos comando do danjo danjo-admin
+3 criar o projeto (danjo-adimin startproject nome_do_projeto)
+4 acesso a pasto do projeto que foi criado 
+5 para rodar o projeto (python manage.py runserver) cria um servidor local
+ estrutura
+o comando python manage.py runserver criar toda a estrutura do projeto, a pasta, o arquivo de BD e o arquivos manage
+dentro da pasta os arquivos mais usados:
+asg.py e  wsgi.py sao arquivos de consiguracao para deploement
+settings.py configuracoes gerais
+
+criando a aplicacao djanfo
+1 acessa a pasta do projeto
+2 python manage.py startapp nome_do_app
+vai criar uma pasta com arquivos para congifurar o app
+principais arquivos
+admin.py configuracao para acesso
+apps.py armazena os app do projeto
+models.py armazena os codigos para acesso ao BD
+views.py para mapear links 
+migrations trata sobre os BD
+
+todo app criado deve ser informado no settings na constante INSTALLED_APPS = [
+
+ROTAS
+basicamente é a atribuição de um url a pagina que esta sendo criado dentro do projeto
+passos:
+1 vai no arquivos urls.py
+2 importar a aplicacao que contem a pasta
+	2.1 from nome_app import views
+3 no arquivo views importa
+	3.1 from django.shortcuts import HttpResponse
+4 dentro do arquivo views criar um funcao
+	4.1 def nome_funcao(request):
+		return HttpResponse('texto para aparece na tela')
+5 no arquivo urls.py cria uma rota chamando a função cosrespondente
+	5.1 dentro de urlpatterns = [
+	path('',views.nome_funcao)	
+]
+# '' significa que esta setado como pagina inicial , views. faz referenca ao arquivo views que chama a funcao que esta uma pagina
+	5.2 criando novas paginas
+	5.2.1 dentro de urlpatterns = [
+	path('',views.nome_funcao),
+	path('nome_da_pagina/',views.nome_funcao, name='nome_pagina')
+#nome_da_pagina sera/ esta setando  que apos a url inicial se digitar ome_da_pagina sera será redirecionado para a outra pagina, por isso tem a / , name='nome_da_pagina' é uma maneira de evitar ambiguidades
+	
+]	
+### como setar HTML no django####
+1 no aruivo views chama a funcao render
+2 cria uma funcao chamando render
+	2.1 def nome_pagina(request):
+		return render(request,'pasta_do_arquivo_html/arquivo_html')
+3 segue os passos para criar uma rota para a pagina
+
+### trabalhando com informacoes dinamicas ######
+	

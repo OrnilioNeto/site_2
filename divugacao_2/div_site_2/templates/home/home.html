@@ -1,0 +1,227 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block conteudo %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<body>
+
+  
+
+  <main id="main">
+
+    <!-- ======= Featured Services Section ======= 
+    <section id="featured-services" class="featured-services">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up">
+            <div class="icon flex-shrink-0"><i class="fa-solid fa-cart-flatbed"></i></div>
+            <div>
+              <h4 class="title">Lorem Ipsum</h4>
+              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+              <a href="service-details.html" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+           End Service Item 
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon flex-shrink-0"><i class="fa-solid fa-truck"></i></div>
+            <div>
+              <h4 class="title">Dolor Sitema</h4>
+              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+              <a href="service-details.html" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>End Service Item 
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon flex-shrink-0"><i class="fa-solid fa-truck-ramp-box"></i></div>
+            <div>
+              <h4 class="title">Sed ut perspiciatis</h4>
+              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+              <a href="service-details.html" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div> End Service Item 
+
+        </div>
+
+      </div>
+    </section> End Featured Services Section -->
+
+    <!-- ======= About Us Section ======= -->
+    <br>
+    <section id="about" class="about pt-0">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4">
+          <div class="col-lg-6 position-relative align-self-start order-lg-last order-first">
+            <img style="height: 400px;" src="{% static 'assets/img/Logistica.jpeg' %}" class="img-fluid" alt="">
+            <!--<a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>-->
+          </div>         
+          <div class="col-lg-6 content order-last  order-lg-first">            
+            <h3>Quem somos</h3>
+            <p>
+                A Nome da Empresa ! é uma empresa de logística com mais de 14 anos de experiência. Temos uma equipe capacitada e oferecemos soluções eficientes para transporte e logística. Nossa abordagem personalizada atende às necessidades específicas de cada cliente. Contamos com uma frota moderna e uma rede de rotas abrangente. Priorizamos a sustentabilidade e a responsabilidade social. Se você busca uma empresa confiável e comprometida com a excelência, conte com a <b> Nome da Empresa !</b> para suas necessidades logísticas.
+            </p>
+            <ul>
+              <li data-aos="fade-up" data-aos-delay="100">
+                <i class="bi bi-diagram-3"></i>
+                <div>
+                  <h5>Visão</h5>
+                  <p>Ser uma Organização Reconhecida pela qualidade dos serviços Prestados, trabalhando de forma sustentável em conjuntos com seus colaboradores.</p>
+                </div>
+              </li>
+              <li data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-fullscreen-exit"></i>
+                <div>
+                  <h5>Missão</h5>
+                  <p>Ter Soluções Logísticas, através de uma gestão customizada que atendam e superem os requisitos negociados com os clientes, agregando tecnologia e inovação nos processos.</p>
+                </div>
+              </li>
+              <li data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-broadcast"></i>
+                <div>
+                  <h5>Valores</h5>
+                  <p>Ética, Responsabilidade, Comprometimento, Lucratividade e Valorização Humana</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="service" class="services pt-0">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <span>Outros Serviços</span>
+          <h2>Outros Serviços</h2>
+
+        </div>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card">
+              <div class="card-img">
+                <img src="{% static 'assets/img/divugacao.jpeg' %}" alt="" style="height: 270px;"  class="img-fluid">
+              </div>
+              <h3><a href="service-details.html" class="stretched-link">NOME PRODUTO/SERVICO</a></h3>
+              <p>Descricao do produto/servico</p>
+                <p>A melhor qualidade com o melhor custo benefício </p>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card">
+              <div class="card-img">
+                <img src="{% static 'assets/img/divugacao.jpeg' %}" alt="" class="img-fluid">
+              </div>
+              <h3><a href="service-details.html" class="stretched-link">Logistica</a></h3>
+              <p>
+                Uma boa logística é fundamental para o sucesso de qualquer empresa que lida com a movimentação de mercadorias ou prestação de serviços. Ela desempenha um papel crucial em diversas áreas, desde o abastecimento de matéria-prima até a entrega final dos produtos aos clientes.</p>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+              <div class="card-img">
+                <img src="{% static 'assets/img/divugacao.jpeg' %}" alt="" class="img-fluid">
+              </div>
+              <h3><a href="service-details.html" class="stretched-link">Transporte</a></h3>
+              <p>Um transporte de cargas seguro é um elemento fundamental da logística eficiente. A proteção dos produtos, o cumprimento das regulamentações, o treinamento dos profissionais, o monitoramento e rastreamento e a parceria com fornecedores confiáveis são elementos-chave para garantir a segurança no transporte de cargas. Investir em medidas de segurança adequadas </p>
+            </div>
+          </div><!-- End Card Item -->
+
+          
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+    
+    {% endblock %}
+
+     <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-info">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span>Nome da Empresa !</span>
+          </a>
+          <p>Contate-nos agora mesmo, faça já seu orçamento. </p>
+          <div class="social-links d-flex mt-4">
+            
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="{% url 'cadastro' %}">Cadastro</a></li>
+            <li><a href="{% url 'tela' %}">Itens</a></li>
+            <li><a href="{% url 'filtro' %}">Pesquisa</a></li>
+            <li><a href="#">Login</a></li>
+          </ul>
+        </div>
+
+        
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Endereço</h4>
+          <p>
+            Rua Maria  da cruz <br>
+            Macaíba - RN Distrito Industrial<br>
+            Brasil <br><br>
+            <strong>Fone:</strong> 84 9 9999-9999<br>
+            <strong>Email:</strong> gmtransportes.rn@hotmail.com<br>
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>64 Bits</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/logis-bootstrap-logistics-website-template/ -->
+        
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

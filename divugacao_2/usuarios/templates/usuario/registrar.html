@@ -1,0 +1,35 @@
+{% extends 'base/base.html' %}
+{% load crispy_forms_tags %}
+{% block conteudo %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+<body>
+<div class="formulario">
+ <br>
+    <form method="POST">
+        {% csrf_token %}
+        {{ formulario | crispy }}    
+        <br>
+        <br>
+        <button class='btn btn-primary' type="submit" style='margin-bottom: 10px;'><a style='color:white;' >Salvar</a></button>
+              
+        <a style='color:rgb(23, 129, 59);' href="{% url 'login' %}">Já Tem cadastro ? Faça Login</a>
+        <br>
+    </form>
+</div>
+</body>
+<style>
+    .formulario {
+        display: flex;
+        justify-content: center;
+
+    }
+</style>
+{% endblock %}
+</html>

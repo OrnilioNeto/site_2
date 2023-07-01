@@ -1,0 +1,1 @@
+web: gunicorn divugacao_2.wsgi

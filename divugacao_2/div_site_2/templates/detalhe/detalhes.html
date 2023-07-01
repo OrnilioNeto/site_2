@@ -1,0 +1,48 @@
+{% extends 'base/base.html' %}
+{% block conteudo %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/fontawesome-free/css/all.min.css'  %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css'  %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css'  %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css'  %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+</head>
+<body>
+    <H1 style='text-align: center;'>Detalhes</H1>
+    <div class="container">
+    <table class='table table-hover table-bordered'>
+    <tr>
+        <th>ID</th>
+        <th>Fornecedor</th>
+        <th>Data</th>
+        <th>Solicitante</th>
+        <th>Autorizado</th>
+    </tr>
+    <tr>
+        <td>{{dados.id}}</td>
+        <td>{{dados.fornecedor}}</td>
+        <td>{{dados.data}}</td>
+        <td>{{dados.solicitante}}</td>
+        <td>{{dados.autorizado}}</td>
+    </tr>
+    
+</table>
+{% endblock %}
+</div>
+<br>
+<button class='btn btn-success' style='margin-bottom: 10px;'><a style='color:white;'><a style='color:white;'><a href="{% url 'tela' %}">Voltar</a></button>
+<button class='btn btn-success' style='margin-bottom: 10px;'><a style='color:white;'><a style='color:white;'><a href="{% url 'cadastro' %}">Novo Cadastro</a></button>
+</body>
+</html>

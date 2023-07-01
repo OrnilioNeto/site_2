@@ -1,0 +1,34 @@
+{% extends 'base/base.html' %}
+{% load crispy_forms_tags %}
+{% block conteudo %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Login</h1>  
+<div class="formulario">
+    
+ <br>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form | crispy }}    
+        <br>
+        <button class='btn btn-primary' type="submit" style='margin-bottom: 10px;'><a style='color:white;' >Entrar</a></button>
+             <br>
+    </form>
+</div>
+</body>
+<style>
+    .formulario {
+        display: flex;
+        justify-content: center;
+
+    }
+</style>
+{% endblock %}
+</html>
